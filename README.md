@@ -20,11 +20,16 @@ Flow:
 
 Run on Windows:
 ```powershell
+Copy-Item config\profile.example.json config\profile.json
+# Edit config\profile.json with your details before running.
 .venv\Scripts\activate
 pip install -r requirements.txt
 playwright install chromium
 uvicorn app.main:app
 ```
+
+Keep your profile, `.env`, database, uploaded resume, and logs private; they are excluded from Git.
+
 Open http://127.0.0.1:8000
 
 Do not enter passwords into the automation. CAPTCHA/OTP are not bypassed.
